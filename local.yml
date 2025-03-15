@@ -1,0 +1,54 @@
+---
+- hosts: local
+  tasks:
+    - name: update the system
+      community.general.pacman:
+        update_cache: true
+        upgrade: true
+
+    - name: set timezone to "{{timezone}}"
+      community.general.timezone:
+        name: "{{timezone}}"
+
+    - name: install dependencies
+      community.general.pacman:
+        name: "{{package_dependencies}}"
+        reason: dependency
+        state: present
+
+    - name: essential packages
+      community.general.pacman:
+        name: "{{essential_drivers}}"
+        state: present
+
+    - name: editors and basic necessities
+      community.general.pacman:
+        name: "{{basic_packages}}"
+        state: present
+
+    - name: dev related stuffs
+      community.general.pacman:
+        name: "{{dev_packages}}"
+        state: present
+
+    - name: fonts
+      community.general.pacman:
+        name: "{{fonts}}"
+        state: present
+
+    - name: general applications
+      community.general.pacman:
+        name: "{{applications}}"
+        state: present
+
+    - name: de and window managers
+      community.general.pacman:
+        name: "{{window_managers}}"
+        state: present
+
+    - name: enable required services
+      ansible.builtin.systemd_service:
+        name: "{{ item }}"
+        state: started
+        enabled: true
+      loop: "{{services_to_enable}}"
