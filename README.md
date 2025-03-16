@@ -1,8 +1,13 @@
 # ansible to setup personal desktop like environments 
 
 > [!Note]
-> Execute the following from the project root
+> When running this the first time, install the requirements before running the playbook. 
 > ```
-> ansible-playbook local.yml -K
+> ansible-galaxy collection install -r requirements.yml
 > ```
 >
+
+### run the playbook
+```
+ansible-playbook local.yml -K
+```

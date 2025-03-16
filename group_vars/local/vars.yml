@@ -2,99 +2,104 @@
 timezone: Europe/Helsinki
 
 package_dependencies:
-    - iptables # for docker port forwarding
-    - tesseract-data-eng # for kde
+  - iptables # for docker port forwarding
+  - tesseract-data-eng # for kde
 
 basic_packages:
-    - pacman-contrib
-    - pkgfile
-    - stow
-    - vim
-    - emacs
-    - openssh
-    - rsync
-    - rclone
-    - zsh
-    - zsh-autosuggestions
-    - man-db
-    - man-pages
-    - texinfo
-    - unzip
-    - gnu-netcat
-    - ansible
+  - pacman-contrib
+  - pkgfile
+  - stow
+  - vim
+  - emacs
+  - openssh
+  - rsync
+  - rclone
+  - zsh
+  - zsh-autosuggestions
+  - man-db
+  - man-pages
+  - texinfo
+  - unzip
+  - gnu-netcat
+  - ansible
 
 essential_drivers:
-    - sof-firmware
-    - pipewire
-    - pipewire-alsa
-    - pipewire-jack
-    - pipewire-pulse
-    - inxi
-    - pavucontrol
-    - rtkit
-    - bluez
-    - bluez-utils
-    - solaar
+  - sof-firmware
+  - pipewire
+  - pipewire-alsa
+  - pipewire-jack
+  - pipewire-pulse
+  - inxi
+  - pavucontrol
+  - rtkit
+  - bluez
+  - bluez-utils
+  - solaar
 
 dev_packages:
-    - docker
-    - docker-compose
-    - direnv
-    - git
-    - github-cli
-    - go
-    - jdk21-openjdk
-    - maven
-    - intellij-idea-community-edition
-    - dbeaver
+  - docker
+  - docker-compose
+  - direnv
+  - git
+  - github-cli
+  - go
+  - jdk21-openjdk
+  - maven
+  - intellij-idea-community-edition
+  - dbeaver
 
 fonts:
-    - freetype2
-    - ttf-liberation
-    - ttf-dejavu
-    - ttf-liberation
-    - noto-fonts
-    - ttf-caladea
-    - ttf-carlito
-    - ttf-dejavu
-    - ttf-liberation
-    - noto-fonts
-    - ttf-opensans
-    - otf-overpass
-    - ttf-roboto
-    - tex-gyre-fonts
-    - ttf-ubuntu-font-family
-    - ttf-bitstream-vera
-    - ttf-inconsolata
-    - ttf-ubuntu-font-family
-    - ttf-dejavu
-    - ttf-freefont
-    - ttf-libertinus
-    - otf-libertinus
-    - ttf-liberation
-    - ttf-jetbrains-mono
-    - ttf-jetbrains-mono-nerd
+  - freetype2
+  - ttf-liberation
+  - ttf-dejavu
+  - ttf-liberation
+  - noto-fonts
+  - ttf-caladea
+  - ttf-carlito
+  - ttf-dejavu
+  - ttf-liberation
+  - noto-fonts
+  - ttf-opensans
+  - otf-overpass
+  - ttf-roboto
+  - tex-gyre-fonts
+  - ttf-ubuntu-font-family
+  - ttf-bitstream-vera
+  - ttf-inconsolata
+  - ttf-ubuntu-font-family
+  - ttf-dejavu
+  - ttf-freefont
+  - ttf-libertinus
+  - otf-libertinus
+  - ttf-liberation
+  - ttf-jetbrains-mono
+  - ttf-jetbrains-mono-nerd
 
 applications:
-    - firefox
-    - keepassxc
-    - neofetch
-    - btop
-    - usbutils
-    - cyme
-    - yazi
-    - kitty
-    - bitwarden
-    - bitwarden-cli
+  - firefox
+  - keepassxc
+  - neofetch
+  - btop
+  - usbutils
+  - cyme
+  - yazi
+  - kitty
+  - bitwarden
+  - bitwarden-cli
 
 window_managers:
-    - hyprland
-    - greetd
-    - greetd-tuigreet
+  - hyprland
+  - greetd
+  - greetd-tuigreet
 
 services_to_enable:
-    - iptables
-    - docker
-    - bluetooth
-    - rtkit-daemon
-    - greetd
+  - iptables
+  - docker
+  - bluetooth
+  - rtkit-daemon
+  - greetd
+
+aur_packages:
+  - rates-bin
+  - google-chrome
+  - zen-browser-bin

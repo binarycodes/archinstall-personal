@@ -52,3 +52,25 @@
         state: started
         enabled: true
       loop: "{{services_to_enable}}"
+
+
+- hosts: local
+  become: false
+  tasks:
+    - name: install yay from arch user repository (aur)
+      kewlfft.aur.aur:
+        name: yay-bin
+        use: makepkg
+        state: present
+
+    - name: install aur packages using yay
+      kewlfft.aur.aur:
+        use: yay
+        state: present
+        name: "{{aur_packages}}"
+
+    - name: upgrade the system using yay, only act on AUR packages.
+      kewlfft.aur.aur:
+        upgrade: yes
+        use: yay
+        aur_only: yes
