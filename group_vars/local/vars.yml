@@ -43,6 +43,7 @@ dev_packages:
   - git
   - github-cli
   - go
+  - jq
   - jdk21-openjdk
   - maven
   - intellij-idea-community-edition
