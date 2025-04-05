@@ -43,6 +43,7 @@ dev_packages:
   - git
   - github-cli
   - go
+  - gopls
   - jq
   - jdk21-openjdk
   - maven
