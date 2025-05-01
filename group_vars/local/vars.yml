@@ -22,6 +22,10 @@ basic_packages:
   - unzip
   - gnu-netcat
   - ansible
+  - iperf3
+  - nfs-utils
+  - ipmitool
+  - wev
 
 essential_drivers:
   - sof-firmware
@@ -88,6 +92,10 @@ applications:
   - kitty
   - bitwarden
   - bitwarden-cli
+  - grim
+  - slurp
+  - swappy
+  - wl-clipboard
 
 window_managers:
   - hyprland
