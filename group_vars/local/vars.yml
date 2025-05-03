@@ -53,6 +53,9 @@ dev_packages:
   - maven
   - intellij-idea-community-edition
   - dbeaver
+  - ansible-core
+  - ansible
+  - terraform
 
 fonts:
   - freetype2
@@ -114,3 +117,4 @@ aur_packages:
   - google-chrome
   - zen-browser-bin
   - winbox
+  - terraform-ls-bin
