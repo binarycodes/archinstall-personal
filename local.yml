@@ -74,3 +74,12 @@
         upgrade: yes
         use: yay
         aur_only: yes
+
+
+- hosts: local
+  tasks:
+    - name: clean pacman cache
+      ansible.builtin.command: paccache -r
+
+    - name: clean pacman cache for all uninstalled packages, do not keep anything
+      ansible.builtin.command: paccache -ruk0

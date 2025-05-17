@@ -26,6 +26,7 @@ basic_packages:
   - nfs-utils
   - ipmitool
   - wev
+  - ripgrep
 
 essential_drivers:
   - sof-firmware
