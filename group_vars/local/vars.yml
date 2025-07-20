@@ -50,6 +50,7 @@ dev_packages:
   - go
   - gopls
   - jq
+  - yq
   - jdk21-openjdk
   - maven
   - intellij-idea-community-edition
