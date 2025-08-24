@@ -42,6 +42,7 @@ essential_drivers:
   - solaar
 
 dev_packages:
+  - podman
   - docker
   - docker-compose
   - direnv
