@@ -83,3 +83,17 @@
 
     - name: clean pacman cache for all uninstalled packages, do not keep anything
       ansible.builtin.command: paccache -ruk0
+
+- hosts: local
+  tasks:
+    - name: copy systemd unit files
+      ansible.builtin.copy:
+        src: "{{ playbook_dir }}/systemd-units/"
+        dest: /etc/systemd/system/
+        follow: no
+        owner: root
+        group: root
+    - name: reload systemd
+      ansible.builtin.systemd_service:
+        daemon_reexec: true
+        

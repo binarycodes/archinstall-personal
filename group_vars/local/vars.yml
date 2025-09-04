@@ -27,6 +27,11 @@ basic_packages:
   - ipmitool
   - wev
   - ripgrep
+  - texlive-bin
+  - texlive-basic
+  - texlive-latex
+  - texlive-latexextra
+  - texlive-plaingeneric
 
 essential_drivers:
   - sof-firmware
@@ -94,7 +99,6 @@ applications:
   - btop
   - usbutils
   - cyme
-  - yazi
   - kitty
   - bitwarden
   - bitwarden-cli
@@ -116,7 +120,6 @@ services_to_enable:
   - greetd
 
 aur_packages:
-  - rates-bin
   - google-chrome
   - zen-browser-bin
   - winbox
