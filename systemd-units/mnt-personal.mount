@@ -5,7 +5,7 @@ Description = Mount personal document storage volume
 What=moria.localdomain:/mnt/zpool0/Document/Sujoy
 Where=/mnt/personal
 Type=nfs
-Options=defaults
+Options=defaults,nfsvers=4,proto=tcp
 TimeoutSec=5
 
 [Install]
