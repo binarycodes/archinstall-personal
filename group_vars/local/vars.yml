@@ -55,6 +55,7 @@ dev_packages:
   - github-cli
   - go
   - gopls
+  - golangci-lint
   - jq
   - yq
   - jdk21-openjdk
