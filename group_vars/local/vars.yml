@@ -56,6 +56,7 @@ dev_packages:
   - go
   - gopls
   - golangci-lint
+  - delve
   - jq
   - yq
   - jdk21-openjdk
