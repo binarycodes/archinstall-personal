@@ -134,3 +134,4 @@ aur_packages:
   - terraform-ls-bin
   - winbox
   - zen-browser-bin
+  - infisical-bin
