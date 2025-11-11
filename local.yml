@@ -1,49 +1,50 @@
 ---
-- hosts: local
+- name: update and install required official packages
+  hosts: local
   tasks:
     - name: update the system
       community.general.pacman:
         update_cache: true
         upgrade: true
 
-    - name: set timezone to "{{timezone}}"
+    - name: set timezone to "{{ timezone }}"
       community.general.timezone:
-        name: "{{timezone}}"
+        name: "{{ timezone }}"
 
     - name: install dependencies
       community.general.pacman:
-        name: "{{package_dependencies}}"
+        name: "{{ package_dependencies }}"
         reason: dependency
         state: present
 
     - name: essential packages
       community.general.pacman:
-        name: "{{essential_drivers}}"
+        name: "{{ essential_drivers }}"
         state: present
 
     - name: editors and basic necessities
       community.general.pacman:
-        name: "{{basic_packages}}"
+        name: "{{ basic_packages }}"
         state: present
 
     - name: dev related stuffs
       community.general.pacman:
-        name: "{{dev_packages}}"
+        name: "{{ dev_packages }}"
         state: present
 
     - name: fonts
       community.general.pacman:
-        name: "{{fonts}}"
+        name: "{{ fonts }}"
         state: present
 
     - name: general applications
       community.general.pacman:
-        name: "{{applications}}"
+        name: "{{ applications }}"
         state: present
 
     - name: de and window managers
       community.general.pacman:
-        name: "{{window_managers}}"
+        name: "{{ window_managers }}"
         state: present
 
     - name: enable required services
@@ -51,10 +52,11 @@
         name: "{{ item }}"
         state: started
         enabled: true
-      loop: "{{services_to_enable}}"
+      loop: "{{ services_to_enable }}"
 
 
-- hosts: local
+- name: update and install required AUR packages
+  hosts: local
   become: false
   tasks:
     - name: install yay from arch user repository (aur)
@@ -67,34 +69,38 @@
       kewlfft.aur.aur:
         use: yay
         state: present
-        name: "{{aur_packages}}"
+        name: "{{ aur_packages }}"
 
     - name: upgrade the system using yay, only act on AUR packages.
       kewlfft.aur.aur:
-        upgrade: yes
+        upgrade: true
         use: yay
-        aur_only: yes
+        aur_only: true
 
 
-- hosts: local
+- name: clean up package caches
+  hosts: local
   tasks:
     - name: clean pacman cache
       ansible.builtin.command: paccache -r
+      changed_when: false
 
     - name: clean pacman cache for all uninstalled packages, do not keep anything
       ansible.builtin.command: paccache -ruk0
+      changed_when: false
 
-- hosts: local
+- name: setup required systemd units
+  hosts: local
   tasks:
     - name: copy systemd unit files
       ansible.builtin.copy:
         src: "{{ playbook_dir }}/systemd-units/"
         dest: /etc/systemd/system/
-        follow: no
+        follow: false
         owner: root
         group: root
+        mode: '0644'
 
     - name: reload systemd
       ansible.builtin.systemd_service:
         daemon_reexec: true
-        
