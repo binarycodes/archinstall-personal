@@ -13,5 +13,10 @@ jobs:
       - name: checkout sources
         uses: actions/checkout@v4
 
+      - name: install dependencies
+        run: |
+          pip3 install ansible
+          ansible-galaxy collection install -r requirements.yml
+
       - name: run ansible-lint
         uses: ansible/ansible-lint@v6
