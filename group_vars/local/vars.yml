@@ -45,6 +45,7 @@ essential_drivers:
   - bluez
   - bluez-utils
   - solaar
+  - brother-mfc-l2860dwe
 
 dev_packages:
   - age
