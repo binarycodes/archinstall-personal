@@ -6,32 +6,32 @@ package_dependencies:
   - tesseract-data-eng # for kde
 
 basic_packages:
-  - pacman-contrib
-  - pkgfile
-  - stow
-  - vim
+  - ansible
   - emacs
-  - openssh
-  - rsync
-  - rclone
-  - zsh
-  - zsh-autosuggestions
+  - gnu-netcat
+  - iperf3
+  - ipmitool
   - man-db
   - man-pages
-  - texinfo
-  - unzip
-  - gnu-netcat
-  - ansible
-  - iperf3
   - nfs-utils
-  - ipmitool
-  - wev
+  - openssh
+  - pacman-contrib
+  - pkgfile
+  - rclone
   - ripgrep
-  - texlive-bin
+  - rsync
+  - stow
+  - texinfo
   - texlive-basic
+  - texlive-bin
   - texlive-latex
   - texlive-latexextra
   - texlive-plaingeneric
+  - unzip
+  - vim
+  - wev
+  - zsh
+  - zsh-autosuggestions
 
 essential_drivers:
   - sof-firmware
@@ -47,82 +47,89 @@ essential_drivers:
   - solaar
 
 dev_packages:
-  - podman
+  - age
+  - ansible
+  - ansible-core
+  - ansible-lint
+  - dbeaver
+  - delve
+  - direnv
   - docker
   - docker-compose
-  - direnv
   - git
   - github-cli
   - go
-  - gopls
   - golangci-lint
-  - delve
-  - jq
-  - yq
-  - jdk21-openjdk
-  - maven
+  - gopls
   - intellij-idea-community-edition
-  - dbeaver
-  - ansible-core
-  - ansible
+  - jdk21-openjdk
+  - jq
+  - maven
+  - opentofu
+  - podman
+  - sops
   - terraform
+  - tflint
+  - yq
 
 fonts:
   - freetype2
-  - ttf-liberation
-  - ttf-dejavu
-  - ttf-liberation
   - noto-fonts
+  - noto-fonts
+  - otf-libertinus
+  - otf-overpass
+  - tex-gyre-fonts
+  - ttf-bitstream-vera
   - ttf-caladea
   - ttf-carlito
   - ttf-dejavu
-  - ttf-liberation
-  - noto-fonts
-  - ttf-opensans
-  - otf-overpass
-  - ttf-roboto
-  - tex-gyre-fonts
-  - ttf-ubuntu-font-family
-  - ttf-bitstream-vera
-  - ttf-inconsolata
-  - ttf-ubuntu-font-family
+  - ttf-dejavu
   - ttf-dejavu
   - ttf-freefont
-  - ttf-libertinus
-  - otf-libertinus
-  - ttf-liberation
+  - ttf-inconsolata
   - ttf-jetbrains-mono
   - ttf-jetbrains-mono-nerd
+  - ttf-liberation
+  - ttf-liberation
+  - ttf-liberation
+  - ttf-liberation
+  - ttf-libertinus
+  - ttf-opensans
+  - ttf-roboto
+  - ttf-ubuntu-font-family
+  - ttf-ubuntu-font-family
 
 applications:
-  - firefox
-  - keepassxc
-  - neofetch
-  - btop
-  - usbutils
-  - cyme
-  - kitty
   - bitwarden
   - bitwarden-cli
+  - btop
+  - cups
+  - cups-pdf
+  - cyme
+  - firefox
   - grim
+  - keepassxc
+  - kitty
+  - neofetch
   - slurp
   - swappy
+  - usbutils
   - wl-clipboard
 
 window_managers:
-  - hyprland
   - greetd
   - greetd-tuigreet
+  - hyprland
 
 services_to_enable:
-  - iptables
-  - docker
   - bluetooth
-  - rtkit-daemon
+  - docker
   - greetd
+  - iptables
+  - rtkit-daemon
 
 aur_packages:
   - google-chrome
-  - zen-browser-bin
-  - winbox
   - terraform-ls-bin
+  - winbox
+  - zen-browser-bin
