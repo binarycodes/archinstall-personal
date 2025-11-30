@@ -67,6 +67,7 @@ dev_packages:
   - jq
   - maven
   - opentofu
+  - packer
   - podman
   - sops
   - terraform
