@@ -8,12 +8,12 @@ package_dependencies:
 basic_packages:
   - ansible
   - emacs
-  - gnu-netcat
   - iperf3
   - ipmitool
   - man-db
   - man-pages
   - nfs-utils
+  - openbsd-netcat
   - openssh
   - pacman-contrib
   - pkgfile
@@ -45,7 +45,6 @@ essential_drivers:
   - bluez
   - bluez-utils
   - solaar
-  - brother-mfc-l2860dwe
 
 dev_packages:
   - age
@@ -112,7 +111,7 @@ applications:
   - grim
   - keepassxc
   - kitty
-  - neofetch
+  - fastfetch
   - slurp
   - swappy
   - usbutils
@@ -136,3 +135,4 @@ aur_packages:
   - winbox
   - zen-browser-bin
   - infisical-bin
+  - brother-mfc-l2860dwe
