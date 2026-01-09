@@ -61,7 +61,7 @@
   tasks:
     - name: install yay from arch user repository (aur)
       kewlfft.aur.aur:
-        name: yay-bin
+        name: yay
         use: makepkg
         state: present
 

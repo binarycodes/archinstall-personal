@@ -1,0 +1,14 @@
+[Unit]
+Description = Mount personal document storage volume
+Wants=mnt-backup.mount
+After=mnt-backup.mount
+
+[Mount]
+What=moria.localdomain:/mnt/zpool0/Backups/Unifi-u6
+Where=/mnt/backup/Unifi-u6
+Type=nfs
+Options=defaults,nfsvers=4,proto=tcp
+TimeoutSec=5
+
+[Install]
+WantedBy=multi-user.target

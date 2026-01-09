@@ -18,6 +18,7 @@ basic_packages:
   - pacman-contrib
   - pkgfile
   - rclone
+  - reflector
   - ripgrep
   - rsync
   - stow
@@ -34,16 +35,16 @@ basic_packages:
   - zsh-autosuggestions
 
 essential_drivers:
-  - sof-firmware
+  - bluez
+  - bluez-utils
+  - inxi
+  - pavucontrol
   - pipewire
   - pipewire-alsa
   - pipewire-jack
   - pipewire-pulse
-  - inxi
-  - pavucontrol
   - rtkit
-  - bluez
-  - bluez-utils
+  - sof-firmware
   - solaar
 
 dev_packages:
@@ -107,11 +108,11 @@ applications:
   - cups
   - cups-pdf
   - cyme
+  - fastfetch
   - firefox
   - grim
   - keepassxc
   - kitty
-  - fastfetch
   - slurp
   - swappy
   - usbutils
@@ -127,12 +128,13 @@ services_to_enable:
   - docker
   - greetd
   - iptables
+  - reflector
   - rtkit-daemon
 
 aur_packages:
+  - brother-mfc-l2860dwe
   - google-chrome
+  - infisical-bin
   - terraform-ls-bin
   - winbox
   - zen-browser-bin
-  - infisical-bin
-  - brother-mfc-l2860dwe
