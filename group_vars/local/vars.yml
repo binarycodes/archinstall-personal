@@ -10,9 +10,11 @@ basic_packages:
   - emacs
   - iperf3
   - ipmitool
+  - iwd
   - man-db
   - man-pages
   - nfs-utils
+  - nmap
   - openbsd-netcat
   - openssh
   - pacman-contrib
@@ -123,14 +125,6 @@ window_managers:
   - greetd-tuigreet
   - hyprland
 
-services_to_enable:
-  - bluetooth
-  - docker
-  - greetd
-  - iptables
-  - reflector
-  - rtkit-daemon
-
 aur_packages:
   - brother-mfc-l2860dwe
   - google-chrome
@@ -138,3 +132,12 @@ aur_packages:
   - terraform-ls-bin
   - winbox
   - zen-browser-bin
+
+services_to_enable:
+  - bluetooth
+  - docker
+  - greetd
+  - iptables
+  - iwd
+  - reflector
+  - rtkit-daemon

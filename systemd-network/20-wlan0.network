@@ -1,0 +1,13 @@
+[Match]
+Name=wlan0
+
+[Network]
+DHCP=yes
+IPv6AcceptRA=yes
+
+[DHCPv4]
+UseGateway=no
+RouteMetric=2048
+
+[IPv6AcceptRA]
+UseGateway=no

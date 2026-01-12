@@ -1,0 +1,9 @@
+[Match]
+Name=enp38s0
+
+[Network]
+DHCP=yes
+
+[DHCPv4]
+UseDomains=true
+UseDNS=true

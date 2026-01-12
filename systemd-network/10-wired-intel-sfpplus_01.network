@@ -1,0 +1,12 @@
+[Match]
+Name=enp36s0f1
+
+[Network]
+DHCP=yes
+
+[DHCPv4]
+UseDomains=true
+UseDNS=true
+
+[Link]
+MTUBytes=9000
