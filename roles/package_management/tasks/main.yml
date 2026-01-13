@@ -1,3 +1,19 @@
+- name: enable multilib repo
+  ansible.builtin.replace:
+    path: /etc/pacman.conf
+    regexp: '^(#\s*)\[(multilib)\]\s*$'
+    replace: '[\2]'
+    backup: true
+
+- name: enable multilib mirrorlist
+  lineinfile:
+    dest: "/etc/pacman.conf"
+    state: "present"
+    line: "Include = /etc/pacman.d/mirrorlist"
+    insertafter: "^\\[multilib\\]"
+    regexp: "Include = /etc/pacman.d/mirrorlist"
+    backup: true
+
 - name: update the system
   community.general.pacman:
     update_cache: true
