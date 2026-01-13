@@ -139,5 +139,5 @@ services_to_enable:
   - greetd
   - iptables
   - iwd
-  - reflector
+  - reflector.timer
   - rtkit-daemon

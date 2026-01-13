@@ -1,0 +1,29 @@
+- name: copy systemd unit files
+  ansible.builtin.copy:
+    src: "{{ playbook_dir }}/systemd-units/"
+    dest: /etc/systemd/system/
+    follow: false
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+    - reload systemd daemon
+
+- name: copy systemd network files
+  ansible.builtin.copy:
+    src: "{{ playbook_dir }}/systemd-network/"
+    dest: /etc/systemd/network/
+    follow: false
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+    - reload systemd daemon
+    - restart systemd-networkd
+
+- name: enable required services
+  ansible.builtin.systemd_service:
+    name: "{{ item }}"
+    state: started
+    enabled: true
+  loop: "{{ services_to_enable }}"

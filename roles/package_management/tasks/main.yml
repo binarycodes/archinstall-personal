@@ -1,0 +1,48 @@
+- name: update the system
+  community.general.pacman:
+    update_cache: true
+    upgrade: true
+
+- name: install dependencies
+  community.general.pacman:
+    name: "{{ package_dependencies }}"
+    reason: dependency
+    state: present
+
+- name: essential packages
+  community.general.pacman:
+    name: "{{ essential_drivers }}"
+    state: present
+
+- name: editors and basic necessities
+  community.general.pacman:
+    name: "{{ basic_packages }}"
+    state: present
+
+- name: dev related stuffs
+  community.general.pacman:
+    name: "{{ dev_packages }}"
+    state: present
+
+- name: fonts
+  community.general.pacman:
+    name: "{{ fonts }}"
+    state: present
+
+- name: general applications
+  community.general.pacman:
+    name: "{{ applications }}"
+    state: present
+
+- name: de and window managers
+  community.general.pacman:
+    name: "{{ window_managers }}"
+    state: present
+
+- name: clean pacman cache
+  ansible.builtin.command: paccache -r
+  changed_when: false
+
+- name: clean pacman cache for all uninstalled packages, do not keep anything
+  ansible.builtin.command: paccache -ruk0
+  changed_when: false
