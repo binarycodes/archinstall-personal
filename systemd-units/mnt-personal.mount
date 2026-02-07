@@ -2,7 +2,7 @@
 Description = Mount personal document storage volume
 
 [Mount]
-What=moria.localdomain:/mnt/zpool0/Document/Sujoy
+What=moria.ip.cloudyhome.net:/mnt/zpool0/Document/Sujoy
 Where=/mnt/personal
 Type=nfs
 Options=defaults,nfsvers=4,proto=tcp
